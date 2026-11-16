@@ -1,0 +1,589 @@
+/* ==========================================================================
+   SRI LAKSHMI NARASIMHA FASHIONS — ROYAL BANARASI EDITION
+   100% Pure CSS + Inline Vector Motifs (< 2KB graphics, zero external files, zero lag)
+   ========================================================================== */
+
+:root {
+  --bg-silk: #f8f3ea;
+  --card-cream: #fffdf9;
+  --royal-maroon: #5e1224;
+  --royal-crimson: #821d35;
+  --gold-bright: #e2be53;
+  --gold-antique: #b88c28;
+  --gold-deep: #856112;
+  --gold-tint: #fbf5e4;
+  --text-ink: #23171a;
+  --text-muted: #6b5b5e;
+  --wa-green: #1b9c4e;
+  --wa-green-dark: #137a3c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 36px 20px 80px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-ink);
+  background-color: var(--bg-silk);
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(226, 190, 83, 0.16) 0%, transparent 60%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23b88c28' stroke-width='0.75' stroke-opacity='0.16'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z'/%3E%3Ccircle cx='30' cy='30' r='10'/%3E%3Ccircle cx='30' cy='30' r='3' fill='%23b88c28' fill-opacity='0.14'/%3E%3Cpath d='M0 0 L12 12 M60 0 L48 12 M0 60 L12 48 M60 60 L48 48'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ================= OFFICIAL BOUTIQUE IMAGE BANNER ================= */
+.boutique-banner-wrapper {
+  max-width: 820px;
+  margin: 0 auto 32px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid var(--gold-antique);
+  outline: 1px solid rgba(226, 190, 83, 0.55);
+  outline-offset: -6px;
+  box-shadow:
+    0 18px 42px rgba(74, 12, 27, 0.22),
+    0 4px 12px rgba(184, 140, 40, 0.18);
+  background-color: var(--royal-maroon);
+}
+
+.boutique-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================= ORNATE CATEGORY FILTER BAR ================= */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 820px;
+  margin: 0 auto 36px auto;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: 1.5px solid var(--gold-antique);
+  background: linear-gradient(180deg, #ffffff 0%, #fbf5e6 100%);
+  color: var(--royal-maroon);
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(94, 18, 36, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+@media (hover: hover) {
+  .filter-btn:hover:not(.active) {
+    transform: translateY(-2px);
+    border-color: var(--royal-maroon);
+    box-shadow: 0 8px 18px rgba(94, 18, 36, 0.16);
+  }
+}
+
+.filter-btn.active,
+.filter-btn.active:hover {
+  background: linear-gradient(135deg, var(--royal-maroon) 0%, var(--royal-crimson) 100%);
+  border-color: var(--gold-bright);
+  color: #fff8e7;
+  box-shadow: 0 8px 20px rgba(94, 18, 36, 0.28);
+}
+
+/* ================= PRICE RANGE & SORT CONTROLS BAR ================= */
+.price-controls-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  max-width: 820px;
+  margin: -18px auto 34px auto;
+  padding: 14px 18px;
+  background: linear-gradient(145deg, #ffffff 0%, #fcf7ee 100%);
+  border: 1.5px solid rgba(184, 140, 40, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(74, 12, 27, 0.06);
+}
+
+.price-range-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.price-btn {
+  padding: 7px 14px;
+  border: 1.5px solid rgba(184, 140, 40, 0.45);
+  background: #ffffff;
+  color: var(--gold-deep);
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.18s ease;
+}
+
+@media (hover: hover) {
+  .price-btn:hover:not(.active) {
+    border-color: var(--royal-maroon);
+    color: var(--royal-maroon);
+    background: #fff9ec;
+  }
+}
+
+.price-btn.active,
+.price-btn.active:hover {
+  background: linear-gradient(135deg, var(--gold-antique) 0%, var(--gold-deep) 100%) !important;
+  border-color: var(--gold-deep) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(133, 97, 18, 0.25);
+}
+
+.sort-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-label {
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--royal-maroon);
+}
+
+.sort-select {
+  padding: 8px 14px;
+  border: 1.5px solid rgba(184, 140, 40, 0.55);
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: var(--royal-maroon);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.sort-select:focus {
+  border-color: var(--royal-maroon);
+}
+
+.no-results-msg {
+  max-width: 820px;
+  margin: 0 auto 30px auto;
+  padding: 24px;
+  text-align: center;
+  background: #fffdf9;
+  border: 1.5px dashed rgba(184, 140, 40, 0.6);
+  border-radius: 16px;
+  color: var(--royal-maroon);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* ================= CATALOG CONTAINER ================= */
+.catalog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* ================= ROYAL HERITAGE PRODUCT CARD ================= */
+.product-card {
+  display: flex;
+  width: 100%;
+  background: linear-gradient(145deg, #ffffff 0%, #fcf7ee 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  border: 1.5px solid rgba(184, 140, 40, 0.55);
+  outline: 1px solid rgba(184, 140, 40, 0.22);
+  outline-offset: -7px;
+  box-shadow:
+    0 14px 34px rgba(74, 12, 27, 0.09),
+    0 2px 6px rgba(184, 140, 40, 0.12);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+@media (hover: hover) {
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 22px 46px rgba(74, 12, 27, 0.16),
+      0 4px 12px rgba(184, 140, 40, 0.2);
+  }
+}
+
+.product-card::after {
+  content: "❖";
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 16px;
+  color: rgba(184, 140, 40, 0.45);
+  pointer-events: none;
+}
+
+/* ================= LEFT SIDE: ZARI-FRAMED MODEL PHOTO ================= */
+.product-image {
+  width: 310px;
+  min-width: 310px;
+  background: radial-gradient(circle at center, #f6efe2 0%, #e8dcc8 100%);
+  border-right: 2px solid rgba(184, 140, 40, 0.45);
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (hover: hover) {
+  .product-card:hover .product-image img {
+    transform: scale(1.04);
+  }
+}
+
+/* ================= RIGHT SIDE: DETAILS & ORNATE CONTROLS ================= */
+.product-details {
+  flex: 1;
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23b88c28' stroke-width='0.8' stroke-opacity='0.11'%3E%3Ccircle cx='120' cy='120' r='90'/%3E%3Ccircle cx='120' cy='120' r='70' stroke-dasharray='4 4'/%3E%3Ccircle cx='120' cy='120' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+/* Top row holding Category Badge + Subtle Fabric Pill */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.category-tag {
+  display: inline-block;
+  padding: 5px 13px;
+  background: linear-gradient(90deg, #fbf3dc 0%, #f5e6be 100%);
+  color: var(--gold-deep);
+  border: 1px solid rgba(184, 140, 40, 0.5);
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Subtle, refined fabric pill (matches style without competing with size buttons) */
+.fabric-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 11px;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: var(--text-muted);
+  border: 1px dashed rgba(184, 140, 40, 0.55);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  user-select: none;
+}
+
+.fabric-pill.fabric-premium {
+  background: linear-gradient(90deg, #fdf7eb 0%, #f8ebd2 100%);
+  color: var(--royal-maroon);
+  border: 1px solid rgba(184, 140, 40, 0.55);
+}
+
+.product-details h2 {
+  margin: 0 0 8px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--royal-maroon);
+  line-height: 1.25;
+}
+
+.dress-desc {
+  margin: 0 0 14px 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.price {
+  margin: 0 0 22px 0;
+  padding-bottom: 16px;
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--text-ink);
+  letter-spacing: 0.4px;
+  border-bottom: 1.5px solid rgba(184, 140, 40, 0.35);
+  position: relative;
+}
+
+.price::after {
+  content: "✦";
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  background-color: var(--card-cream);
+  padding-right: 8px;
+  font-size: 12px;
+  color: var(--gold-antique);
+}
+
+/* ================= SIZE SELECTOR ================= */
+.size-label {
+  margin: 0 0 11px 0;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold-deep);
+}
+
+.size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.size-btn {
+  width: auto;
+  min-width: 50px;
+  height: 45px;
+  padding: 0 14px;
+  border: 1.5px solid rgba(184, 140, 40, 0.55);
+  background: linear-gradient(180deg, #ffffff 0%, #faf4e8 100%);
+  color: var(--royal-maroon);
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+@media (hover: hover) {
+  .size-btn:hover:not(:disabled):not(.active) {
+    border-color: var(--royal-maroon);
+    background: #fff9ec;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(184, 140, 40, 0.22);
+  }
+}
+
+.size-btn.active,
+.size-btn.active:hover,
+.size-btn.active:focus {
+  background: linear-gradient(135deg, var(--royal-maroon) 0%, var(--royal-crimson) 100%) !important;
+  border-color: var(--gold-bright) !important;
+  color: #fff6dc !important;
+  box-shadow: 0 6px 14px rgba(94, 18, 36, 0.3);
+  transform: translateY(-1px);
+}
+
+.size-btn.out-of-stock {
+  border-color: #e6dfd5;
+  color: #b5aba8;
+  background: #f6f2ec;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+/* ================= LIVE AVAILABILITY BADGES ================= */
+.availability {
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 15px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  transition: all 0.25s ease;
+}
+
+.badge.in-stock {
+  background: linear-gradient(90deg, #e7f6ed 0%, #dcf2e5 100%);
+  color: #145c30;
+  border: 1px solid #b6e2c7;
+}
+
+.badge.low-stock {
+  background: linear-gradient(90deg, #fef4df 0%, #fde9c2 100%);
+  color: #8c4f00;
+  border: 1px solid #f2cf88;
+}
+
+/* ================= ROYAL WHATSAPP CTA BUTTON ================= */
+.whatsapp-btn {
+  padding: 14px 26px;
+  background: linear-gradient(135deg, var(--wa-green) 0%, var(--wa-green-dark) 100%);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  width: fit-content;
+  box-shadow: 0 8px 20px rgba(27, 156, 78, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+@media (hover: hover) {
+  .whatsapp-btn:hover {
+    filter: brightness(1.06);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(27, 156, 78, 0.36);
+  }
+}
+
+.whatsapp-btn:active {
+  transform: translateY(0);
+}
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+@media (max-width: 700px) {
+  body {
+    padding: 16px 12px 60px;
+  }
+
+  .boutique-banner-wrapper {
+    margin-bottom: 20px;
+    border-radius: 14px;
+  }
+
+  .filter-bar {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .filter-btn {
+    padding: 8px 14px;
+    font-size: 12.5px;
+  }
+
+  .price-controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: -10px;
+    margin-bottom: 24px;
+    padding: 12px;
+  }
+
+  .price-range-group {
+    justify-content: center;
+  }
+
+  .sort-group {
+    justify-content: space-between;
+    border-top: 1px solid rgba(184, 140, 40, 0.25);
+    padding-top: 10px;
+  }
+
+  .sort-select {
+    flex: 1;
+  }
+
+  .product-card {
+    flex-direction: column;
+  }
+
+  .product-card::after {
+    display: none;
+  }
+
+  .product-image {
+    width: 100%;
+    min-width: 100%;
+    border-right: none;
+    border-bottom: 2px solid rgba(184, 140, 40, 0.45);
+  }
+
+  .product-image img {
+    height: 450px;
+  }
+
+  .product-details {
+    padding: 24px 20px;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ================= BOUTIQUE PERKS / FREE ALTERATIONS STRIP ================= */
+.boutique-perks-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 820px;
+  margin: -18px auto 28px auto;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, var(--royal-maroon) 0%, var(--royal-crimson) 100%);
+  border: 1.5px solid var(--gold-antique);
+  border-radius: 14px;
+  color: #fff8e7;
+  font-size: 13.5px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 10px 24px rgba(74, 12, 27, 0.16);
+}
+
+.perk-item strong {
+  color: var(--gold-bright);
+  font-weight: 800;
+}
+
+.perk-divider {
+  color: var(--gold-bright);
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+@media (max-width: 700px) {
+  .boutique-perks-bar {
+    flex-direction: column;
+    gap: 6px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    padding: 12px 14px;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .perk-divider {
+    display: none;
+  }
+}

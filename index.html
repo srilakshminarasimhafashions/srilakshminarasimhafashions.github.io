@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Lakshmi Narasimha Fashions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Boutique Official Banner Image -->
+  <header class="boutique-banner-wrapper">
+    <img src="banner.jpg" alt="Sri Lakshmi Narasimha Fashions and Boutique" class="boutique-banner-img">
+  </header>
+
+  <!-- Clean Single-Row Boutique Perks Strip -->
+  <div class="boutique-perks-bar">
+    <span class="perk-item">✂️ <strong>Free Custom Alterations</strong></span>
+    <span class="perk-divider">❖</span>
+    <span class="perk-item">✨ <strong>100% Quality Checked</strong></span>
+    <span class="perk-divider">❖</span>
+    <span class="perk-item">💬 <strong>Direct WhatsApp Booking</strong></span>
+  </div>
+    
+  </header>
+
+  <!-- Category Filter Bar -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All (8)</button>
+    <button class="filter-btn" data-filter="office-wear">Office Wear (3)</button>
+    <button class="filter-btn" data-filter="straight-cut">Office Wear Straight Cut (4)</button>
+    <button class="filter-btn" data-filter="malchanderi">Malchanderi Frock (1)</button>
+  </div>
+
+  <!-- Price Range Buttons & Sort Dropdown Bar -->
+  <div class="price-controls-bar">
+    <div class="price-range-group">
+      <button class="price-btn active" data-min="0" data-max="99999">All Prices</button>
+      <button class="price-btn" data-min="0" data-max="500">₹0 – ₹500</button>
+      <button class="price-btn" data-min="500" data-max="1000">₹500 – ₹1,000</button>
+      <button class="price-btn" data-min="1000" data-max="1500">₹1,000 – ₹1,500</button>
+    </div>
+
+    <div class="sort-group">
+      <label for="price-sort" class="sort-label">Sort:</label>
+      <select id="price-sort" class="sort-select">
+        <option value="default">Featured</option>
+        <option value="asc">Price: Low to High</option>
+        <option value="desc">Price: High to Low</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Empty state message -->
+  <p id="no-results-msg" class="no-results-msg" style="display: none;">
+    No dresses available in this exact filter & price range. Try selecting "All Prices" or another category!
+  </p>
+
+  <!-- Main wrapper holding all 8 dress cards -->
+  <div class="catalog-container">
+
+    <!-- ================= CATEGORY 1: OFFICE WEAR (3 DRESSES) ================= -->
+
+    <!-- Office Wear 1: Rani Pink Floral Kurti Set -->
+    <div class="product-card" data-category="office-wear" data-price="800">
+      <div class="product-image">
+        <img src="Light Pink Floral.png" alt="Rani Pink Floral Kurti Set">
+      </div>
+      <div class="product-details">
+        <div class="tag-row">
+          <span class="category-tag">Office Wear</span>
+          <span class="fabric-pill">✦ Pure Cotton</span>
+        </div>
+        <h2>Rani Pink Floral Kurti Set</h2>
+        <p class="dress-desc">Soft breathable kurti in a bright pink floral print with striped pants and a matching border dupatta. Easy all-day office wear.</p>
+        <p class="price">₹800</p>
+        <p class="size-label">Select Size:</p>
+        <div class="size-options">
+          <button class="size-btn" data-stock="1">M</button>
+          <button class="size-btn" data-stock="1">L</button>
+          <button class="size-btn" data-stock="1">XL</button>
+          <button class="size-btn out-of-stock" data-stock="0" disabled>XXL</button>
+        </div>
+        <div class="availability">
+          <span class="badge stock-badge in-stock">● Select a size to check stock</span>
+        </div>
+        <button class="whatsapp-btn">Order / Inquire on WhatsApp</button>
+      </div>
+    </div>
+
+    <!-- Office Wear 2: Haldi Mustard Kurti Set -->
+    <div class="product-card" data-category="office-wear" data-price="800">
+      <div class="product-image">
+        <img src="Mustard Kurti.png" alt="Haldi Mustard Kurti Set">
+      </div>
+      <div class="product-details">
+        <div class="tag-row">
+          <span class="category-tag">Office Wear</span>
+          <span class="fabric-pill">✦ Pure Cotton</span>
+        </div>
+        <h2>Haldi Mustard Kurti Set</h2>
+        <p class="dress-desc">Warm mustard-yellow kurti with delicate white floral motifs, paired with matching printed pants and a light dupatta.</p>
+        <p class="price">₹800</p>
+        <p class="size-label">Select Size:</p>
+        <div class="size-options">
+          <button class="size-btn" data-stock="1">M</button>
+          <button class="size-btn" data-stock="1">L</button>
+          <button class="size-btn out-of-stock" data-stock="0" disabled>XL</button>
+          <button class="size-btn" data-stock="1">XXL</button>
+        </div>
+        <div class="availability">
+          <span class="badge stock-badge in-stock">● Select a size to check stock</span>
+        </div>
+        <button class="whatsapp-btn">Order / Inquire on WhatsApp</button>
+      </div>
+    </div>
+
+    <!-- Office Wear 3: Pista Green Floral Kurti Set -->
+    <div class="product-card" data-category="office-wear" data-price="800">
+      <div class="product-image">
+        <img src="Green Floral.png" alt="Pista Green Floral Kurti Set" loading="lazy">
+      </div>
+      <div class="product-details">
+        <div class="tag-row">
+          <span class="category-tag">Office Wear</span>
+          <span class="fabric-pill">✦ Pure Cotton</span>
+        </div>
+        <h2>Pista Green Floral Kurti Set</h2>
+        <p class="dress-desc">Fresh pastel green floral kurti with neat neckline work and a soft matching dupatta—lightweight and comfortable for daily wear.</p>
+        <p class="price">₹800</p>
+        <p class="size-label">Select Size:</p>
+        <div class="size-options">
+          <button class="size-btn" data-stock="1">M</button>
+          <button class="size-btn" data-stock="1">L</button>
+          <button class="size-btn" data-stock="1">XL</button>
+          <button class="size-btn out-of-stock" data-stock="0" disabled>XXL</button>
+        </div>
+        <div class="availability">
+          <span class="badge stock-badge in-stock">● Select a size to check stock</span>
+        </div>
+        <button class="whatsapp-btn">Order / Inquire on WhatsApp</button>
+      </div>
+    </div>
+
+    <!-- ============ CATEGORY 2: OFFICE WEAR STRAIGHT CUT (4 DRESSES) ============ -->
+
+    <!-- Straight Cut 1: Steel Grey Zari-Border Suit Set -->
+    <div class="product-card" data-category="straight-cut" data-price="800">
+      <div class="product-image">
+        <img src="Grey.png" alt="Steel Grey Zari-Border Suit Set" loading="lazy">
+      </div>
+      <div class="product-details">
+        <div class="tag-row">
+          <span class="category-tag">Office Wear Straight Cut</span>
+          <span class="fabric-pill">✦ Pure Cotton</span>
+        </div>
+        <h2>Steel Grey Zari-Border Suit Set</h2>
+        <p class="dress-desc">Elegant steel-grey straight-cut kurti with leaf prints, zigzag pants, and a silver-striped dupatta for a smart work look.</p>
+        <p class="price">₹800</p>
+        <p class="size-label">Select Size:</p>
+        <div class="size-options">
+          <button class="size-btn" data-stock="1">M</button>
+          <button class="size-btn" data-stock="1">L</button>
+          <button class="size-btn out-of-stock" data-stock="0" disabled>XL</button>
+          <button class="size-btn out-of-stock" data-stock="0" disabled>XXL</button>
+        </div>
+        <div class="availability">
+          <span class="badge stock-badge in-stock">● Select a size to check stock</span>
+        </div>
+        <button class="whatsapp-btn">Order / Inquire on WhatsApp</button>
+      </div>
+    </div>
+
+    <!-- Straight Cut 2: Olive Green Floral Straight Suit -->
+    <div class="product-card" data-category="straight-cut" data-price="800">
+      <div class="product-image">
+        <img src="Flower(Green).jpeg" alt="Olive Green Floral Straight Suit" loading="lazy">
+      </div>
+      <div class="product-details">
+        <div class="tag-row">
+          <span class="category-tag">Office Wear Straight Cut</span>
+          <span class="fabric-pill">✦ Pure Cotton</span>
+        </div>
+        <h2>Olive Green Floral Straight Suit</h2>
+        <p class="dress-desc">Rich olive-green floral straight kurti with subtle neck embroidery, paired with dark brown pants and a gold-bordered dupatta.</p>
+        <p class="price">₹800</p>
+        <p class="size-label">Select Size:</p>
+        <div class="size-options">
+          <button class="size-btn" data-stock="1">M</button>
+          <button class="size-btn" data-stock="1">L</button>
+          <button class="size-btn" data-stock="1">XL</button>
+          <button class="size-btn" data-stock="1">XXL</button>
+        </div>
+        <div class="availability">
+          <span class="badge stock-badge in-stock">● Select a size to check stock</span>
+        </div>
+        <button class="whatsapp-btn">Order / Inquire on WhatsApp</button>
+      </div>
+    </div>
+
+    <!-- Straight Cut 3: Rose Pink Straight Cut Set -->
+    <div class="product-card" data-category="straight-cut" data-price="850">
+      <div class="product-image">
+        <img src="Pink Floral.png" alt="Rose Pink Straight Cut Set" loading="lazy">
+      </div>
+      <div class="product-details">
+        <div class="tag-row">
+          <span class="category-tag">Office Wear Straight Cut</span>
+          <span class="fabric-pill">✦ Pure Cotton</span>
+        </div>
+        <h2>Rose Pink Straight Cut Set</h2>
+        <p class="dress-desc">Classic rose-pink straight-cut kurti with fine floral patterns, matching pants, and a lightweight dupatta.</p>
+        <p class="price">₹850</p>
+        <p class="size-label">Select Size:</p>
+        <div class="size-options">
+          <button class="size-btn" data-stock="1">M</button>
+          <button class="size-btn" data-stock="1">L</button>
+          <button class="size-btn" data-stock="1">XL</button>
+          <button class="size-btn" data-stock="1">XXL</button>
+        </div>
+        <div class="availability">
+          <span class="badge stock-badge in-stock">● Select a size to check stock</span>
+        </div>
+        <button class="whatsapp-btn">Order / Inquire on WhatsApp</button>
+      </div>
+    </div>
+
+    <!-- Straight Cut 4: Mint Leaf Straight Kurti Set -->
+    <div class="product-card" data-category="straight-cut" data-price="850">
+      <div class="product-image">
+        <img src="Green Leafy Kurta.png" alt="Mint Leaf Straight Kurti Set" loading="lazy">
+      </div>
+      <div class="product-details">
+        <div class="tag-row">
+          <span class="category-tag">Office Wear Straight Cut</span>
+          <span class="fabric-pill">✦ Pure Cotton</span>
+        </div>
+        <h2>Mint Leaf Straight Kurti Set</h2>
+        <p class="dress-desc">Cool mint-green straight-cut kurti with leafy prints, designed for a clean, flattering fit through long workdays.</p>
+        <p class="price">₹850</p>
+        <p class="size-label">Select Size:</p>
+        <div class="size-options">
+          <button class="size-btn" data-stock="1">M</button>
+          <button class="size-btn" data-stock="1">L</button>
+          <button class="size-btn out-of-stock" data-stock="0" disabled>XL</button>
+          <button class="size-btn" data-stock="1">XXL</button>
+        </div>
+        <div class="availability">
+          <span class="badge stock-badge in-stock">● Select a size to check stock</span>
+        </div>
+        <button class="whatsapp-btn">Order / Inquire on WhatsApp</button>
+      </div>
+    </div>
+
+    <!-- ======== CATEGORY 3: MALCHANDERI FROCK PATTERN (1 DRESS) ======== -->
+
+    <!-- Malchanderi Frock -->
+    <div class="product-card" data-category="malchanderi" data-price="1400">
+      <div class="product-image">
+        <img src="Malchandheri.png" alt="Royal Malchanderi Anarkali Frock" loading="lazy">
+      </div>
+      <div class="product-details">
+        <div class="tag-row">
+          <span class="category-tag">Malchanderi Frock Pattern</span>
+          <span class="fabric-pill fabric-premium">❖ Malchanderi Silk</span>
+        </div>
+        <h2>Royal Malchanderi Anarkali Frock</h2>
+        <p class="dress-desc">Graceful flared frock-style suit in rich Malchanderi fabric with a flowing silhouette—ideal for festive days and family gatherings.</p>
+        <p class="price">₹1,400</p>
+        <p class="size-label">Select Size:</p>
+        <div class="size-options">
+          <button class="size-btn" data-stock="1">M</button>
+          <button class="size-btn" data-stock="1">L</button>
+          <button class="size-btn out-of-stock" data-stock="0" disabled>XL</button>
+          <button class="size-btn" data-stock="1">XXL</button>
+          <button class="size-btn" data-stock="1">XXXL</button>
+        </div>
+        <div class="availability">
+          <span class="badge stock-badge in-stock">● Select a size to check stock</span>
+        </div>
+        <button class="whatsapp-btn">Order / Inquire on WhatsApp</button>
+      </div>
+    </div>
+
+  </div> <!-- End of catalog-container -->
+
+  <script src="script.js"></script>
+</body>
+</html>
